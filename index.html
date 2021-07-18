@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kor"></html>
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Landing Page - Start Bootstrap Theme</title>
+        <title>Admin</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap icons-->
@@ -17,11 +17,46 @@
     </head>
     <body>
         <!-- Navigation-->
-        <nav class="navbar navbar-light bg-light static-top">
-            <div class="container">
-                <a class="navbar-brand" href="#!">Start Bootstrap</a>
-                <a class="btn btn-primary" href="#signup">Sign Up</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">The Auction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div class="collapse navbar-collapse" id="navbarColor02">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Main</a>
+                    <span class="visually-hidden">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">메뉴1</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">메뉴2</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">메뉴3</a>
+                </li>
+              </ul>
             </div>
+            <div class="nav navbar-right" id="navbarColor03">
+              <ul class="nav navbar-nav navbar-right">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="text-indent: 2.5cm;" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">설정</a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item"  href="#">나의 관심물건내역</a>
+                  <a class="dropdown-item" href="#">나의 결제내역</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">로그인/로그아웃</a>
+                  
+                </div>
+              </li>
+              </ul>
+            </div>
+          </div>
         </nav>
         <!-- Masthead-->
         <header class="masthead">
@@ -30,7 +65,7 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Generate more leads with a professional landing page!</h1>
+                            <h3 class="mb-5">경매 물건을 검색해보세요.</h3>
                             <!-- Signup form-->
                             <!-- * * * * * * * * * * * * * * *-->
                             <!-- * * SB Forms Contact Form * *-->
@@ -41,13 +76,43 @@
                             <!-- to get an API token!-->
                             <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
                                 <!-- Email address input-->
-                                <div class="row">
-                                    <div class="col">
-                                        <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                        <div class="invalid-feedback text-white" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                                <div class="container3">
+                                   <div class="row">
+                                      <div class="col col-auto">
+                                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                        <option selected>시/도</option>
+                                        <option value="1">서울</option>
+                                        <option value="2">경기</option>
+                                        <option value="3">인천</option>
+                                      </select>
+                                      </div>
+                                      <div class="col col-auth">
+                                      <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                        <option selected>구/군</option>
+                                        <option value="1">강남구</option>
+                                        <option value="2">마포구</option>
+                                        <option value="3">서대문구</option>
+                                      </select>
+                                      </div>
+                                      <div class="col col-auto">
+                                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                          <option selected>읍/면/동</option>
+                                          <option value="1">a</option>
+                                          <option value="2">b</option>
+                                          <option value="3">c</option>
+                                        </select>
+                                        </div>
+                                        <div class="col col-auto">
+                                          <select class="form-select form-select-sm" aria-label=".form-select-sm example ">
+                                            <option selected>부동산 종류</option>
+                                            <option value="1">a</option>
+                                            <option value="2">b</option>
+                                            <option value="3">c</option>
+                                          </select>
+                                          </div>
+                                        <div class="col-auto"><button class="btn btn-primary btn-sm disabled" id="submitButton" type="submit">검색</button></div>
                                     </div>
-                                    <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                                   
                                 </div>
                                 <!-- Submit success message-->
                                 <!---->
@@ -64,7 +129,7 @@
                                 <!---->
                                 <!-- This is what your users will see when there is-->
                                 <!-- an error submitting the form-->
-                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                                <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error!!!</div></div>
                             </form>
                         </div>
                     </div>
